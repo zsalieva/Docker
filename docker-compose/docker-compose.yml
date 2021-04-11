@@ -1,0 +1,15 @@
+version: '3'
+services:
+    web:
+        image: nginx
+        container_name: my-nginx
+        ports:
+            - "8095:80"
+    web2:
+        image: redis
+        container_name: redis
+    web3:
+        image: nginx
+        container_name: my-nginx2
+        ports:
+            - "8096:80"

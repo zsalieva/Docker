@@ -15,6 +15,8 @@ resource "aws_instance" "web" {
          sudo apt update
          apt-cache policy docker-ce
          sudo apt install docker-ce -y 
+         sudo curl -L https://github.com/docker/compose/releases/download/1.20.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+         sudo chmod +x /usr/local/bin/docker-compose
       EOF       
 
   tags = {
